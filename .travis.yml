@@ -6,4 +6,4 @@ before_install:
   - docker build -t hdmdhr/docker-react-test -f Dockerfile.dev .
 
 script:
-  - docker run hdmdhr/docker-react-test npm run test -- --coverage
+  - docker run -e CI=true hdmdhr/docker-react-test npm run test
